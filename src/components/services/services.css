@@ -1,0 +1,156 @@
+.servicesContainer {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80px!important;
+}
+.serviceBoxes {
+    margin-top: 60px;
+    flex-wrap: wrap;
+    column-gap: 70px;
+    row-gap: 40px;
+    text-align: center;
+
+
+}
+
+.serviceBox {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 250px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: black;
+    padding: 0 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 50;
+    background: white;
+}
+
+.serviceBox:hover {
+    background-color: var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+ 
+.serviceBox:hover .serviceBoxtitle  {
+   
+        color: white;
+    
+}
+
+
+
+.serviceBox  img {
+margin: 15px 0;
+}
+
+.serviceBoxtitle {
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+
+
+.serviceBoxDesc {
+    color: var(--gray-color);
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.serviceBox img {
+    width: 120px;
+}
+
+.serviceIcon {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--gray-color5);
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.ServiceVector {
+    position: absolute;
+    right: -50px;
+    top: 365px;
+    transform: rotateX(45deg);
+    -webkit-transform: rotateX(45deg);
+    -moz-transform: rotateX(45deg);
+    -ms-transform: rotateX(45deg);
+    -o-transform: rotateX(45deg);
+}
+
+
+@media (max-width:1200px) {
+    .servicesContainer {
+        padding-top: 80px!important;
+    }
+}
+
+@media (max-width:600px) {
+    .serviceBox img {
+        width: 100px;
+    }
+}
+
+.servicesPopup {
+    background-color: var(--main-color);
+    padding: 50px;
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2010;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: none;
+    color: white;
+}
+
+.servicesPopup h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.servicesPopupIcon {
+    color: white;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+
+
+
+@media (min-width:650px) {
+    .servicesPopup {
+    margin-top: 35px;
+    width: 600px;
+    height: 500px;
+    }
+    .servicesPopup h2 {
+        font-size: 24px!important;
+    }
+
+}

@@ -1,0 +1,152 @@
+.customerContainer {
+    background-color: #F9F9FD;
+    padding-top: 130px!important;
+    padding-bottom: 80px!important;
+}
+
+.customerBoxes {
+    width: 50%;
+    flex-wrap: wrap;
+    color: white;
+    gap: 30px;
+    height: 450px;
+}
+
+
+.customerBox {
+    background-color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    width: 220px;
+    height: 220px;
+}
+
+.customerBoxContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.customerTitleBlue{
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 40px;
+}
+.customerTitleYellow{
+    color: var(--secondary-color-yellow);
+    font-weight: 600;
+    font-size: 40px;
+}
+.customerTitlePink{
+    color: var(--third-color-pink);
+    font-weight: 600;
+    font-size: 40px;
+}
+.customerTitleGreen{
+    color: var(--secondary-color-green);
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.customerDesc{
+    color: var(--gray-color);
+    text-align: center;
+}
+.customerCustomer {
+    width: 50%;
+}
+
+.customerCustomer > h2{
+    margin-top: -50px;
+    font-weight: 600;
+    color: black;
+    font-size: 40px;
+    
+}
+
+
+.customerCustomer > p{
+color: var(--gray-color);
+margin-top: 35px;
+margin-bottom: 40px;
+
+}
+
+.customerCustomer > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.customerCustomer ul > li {
+    display: flex;
+    color: var(--gray-color);
+    margin-bottom: 15px;
+    gap: 10px;
+
+}
+
+.customerBoxUp {
+    margin-top: -35px;
+}
+.customerIcon {
+color: var(--main-color);
+}
+
+@media (max-width:1050px) {
+    .customerBoxes {
+        width: 100%;
+    }
+        .customerCustomer h2 {
+            font-size:30px;
+        }
+
+}
+
+@media (max-width:810px) {
+    .customerContainer {
+        flex-direction: column;
+        padding-top: 80px!important;
+        padding-bottom: 80px!important;
+    }
+
+    .customerBoxes {
+        margin: auto;
+        height: unset;
+        width: unset;
+        gap: 20px;
+    }
+
+    .customerBox {
+        margin: auto;
+        width: 100%;
+    }
+    .customerCustomer {
+        margin-top: 70px;
+        text-align: center;
+        width: unset;
+    }
+    .customerTitle {
+        font-size: 30px;
+    }
+    .customerBoxUp{
+        margin-top: 0!important;
+    }
+    .customerCustomer h2 {
+        margin-top: 0;
+    }
+}
+
+@media (max-width:600px) {
+    .customerTitle {
+        font-size: 25px!important;
+    }
+    .customerCustomer h2 {
+        font-size: 23px;
+    }
+}

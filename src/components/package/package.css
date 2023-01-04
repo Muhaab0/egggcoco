@@ -1,0 +1,316 @@
+.packageContainer {
+    padding-bottom: 60px!important;
+    padding-top:80px!important;
+    position: relative;
+}
+
+
+.packageBox {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    width: 400px;
+    color: #231D4F;
+    padding: 0 20px;
+    position: relative;
+    z-index: 555;
+    background-color: white;
+}
+
+
+.Pro {
+    position: relative;
+    background-color: var(--main-color);
+    color: white;
+    margin-bottom: 145px;
+}
+
+.Pro::before {
+    content: "MOST POPULAR";
+    background-color: var(--secondary-color-sky);
+    padding: 10px 30px;
+    border-radius: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.packagePrice {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 70px;
+    margin-bottom: 35px;
+}
+.packageName {
+    font-size: 20px;
+    font-weight: 400;
+}
+.packageDescription {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.packageBtnContainer {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: #5cc8fc2e;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.packageBtn {
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-color-sky);
+    cursor: pointer;
+}
+.packageBox ul {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.packageBox ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 200;
+   
+}
+
+.packageIcon {
+    color: #00000030;
+}
+
+
+
+
+.packagePopularTextContainer {
+    position: absolute;
+    background-color: var(--secondary-color-sky);
+    padding: 8px 25px;
+    font-weight: 400;
+    font-size: 13px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    right: 20px;
+    top: 20px;
+}
+
+.ServiceVector {
+    position: absolute;
+}
+
+
+
+.PackageVector {
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    transform: rotatex(-16deg);
+}
+
+.PackageVector2 {
+    position: absolute;
+    top: 35rem;
+    left: -15rem;
+}
+
+.packagePopup {
+    background-color: var(--main-color);
+    padding: 50px;
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2010;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: none;
+}
+
+
+.packagePopupIcon {
+    color: white;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+
+.show {
+    display: block;
+}
+
+@media (max-width:800px) {
+    .packageBoxes {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .packageBox.Pro {
+        margin-bottom:0;
+    }
+
+    .packageBox {
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .packagePrice {
+        font-size: 25px;
+    }
+}
+
+
+
+
+.packageForms {
+    text-align: center;
+}
+.packageFormsInput {
+    position: relative;
+}
+
+.packageFormsInput input:not(.packageFormsInputSubmit),  .packageTextArea {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    padding: 8px 10px;
+    border: solid 1px var(--main-color) ;
+    outline: none;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.packageFormsInput textarea {
+    height: 100px!important;
+}
+
+.packagesFormsIconTextArea {
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    font-size: 20px;
+    color: var(--gray-color);
+    transform: translatey(-50%);
+}
+
+.packageFormsInput input::focus {
+    outline: none;
+}
+
+.packagesFormsIcon {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    font-size: 20px;
+    color: var(--gray-color);
+    transform: translatey(-50%);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+}
+
+.packageFormsInput input::placeholder {
+    width: 60%;
+    transform: translatey(-50%);
+    font-weight: 200;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 10px ;
+    z-index: 5;
+    color:var(--gray-color);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+}
+
+.packageFormsInput.submit {
+    text-align: left;
+    margin: auto;
+    padding: 8px 10px;
+    width: 110px;
+     background: var(--main-color);
+     color: white;
+     border-radius: 10px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     cursor: pointer;
+}
+
+.packageForms.submit svg {
+    font-size: 20px;
+}
+
+.packageFormsInputSubmit {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media (min-width:650px) {
+    .packagePopup {
+    margin-top: 35px;
+    width: 600px;
+    height: 500px;
+    }
+    .packageFormsInput input:not(.packageFormsInputSubmit), .packageTextArea {
+    width: 50%;
+    height: 43px;
+    }
+    .packagesFormsIcon , .packagesFormsIconTextArea  {
+        right: 26%;
+        font-size: 25px!important;
+    }
+    .packageFormsInput textarea {
+        height: 125px!important;
+    }
+    .packageFormsInput.submit {
+        padding: 10px 15px;
+        width: 120px;
+    }
+    .packageFormsInput input:not(.packageFormsInputSubmit), .packageTextArea { 
+        margin-bottom: 30px;
+    }
+    
+}

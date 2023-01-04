@@ -1,0 +1,31 @@
+.aboutContentBox {
+    background-color: var( --gray-color5);
+    padding: 80px ;
+    position: relative;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-top: 80px;
+}
+.aboutContentBox img {
+    top: 80px;
+    position: absolute;
+}
+
+.aboutContentBox h2 {
+    margin: auto;
+    font-weight: 400;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 45px;
+}
+
+.aboutContentBox p {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    color: var(--gray-color);
+}

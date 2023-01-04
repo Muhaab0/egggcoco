@@ -1,0 +1,238 @@
+.customPackageFormsContainer {
+    margin:auto;
+}
+
+.customPackageFormsInformations {
+    width: 45%;
+}
+
+.customPackageFormsInformations h2 {
+    width: 70%;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.customPackageFormsParagraph {
+    color: var(--gray-color);
+    margin-bottom: 35px;
+    line-height: 1.7;
+    width: 60%;
+} 
+
+.customPackageFormsInfo {
+    margin-bottom: 25px;
+    color: var(--main-color);
+}
+
+.customPackageFormsgrid {
+    margin-top: 80px;
+}
+
+
+.customPackageForms {
+    text-align: center;
+    width: 45%;
+}
+.customPackageFormsInput {
+    position: relative;
+}
+
+.customPackageFormsInput input:not(.customPackageFormsInputSubmit),  textarea {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    padding: 13px 20px;
+    border: solid 1px var(--main-color) ;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.customPackageFormsInput textarea {
+    height: 150px!important;
+}
+
+.customFormsIconTextArea {
+    position: absolute;
+    top: 13%;
+    right: 12%;
+    color: var(--gray-color);
+    transform: translatey(-50%);
+}
+
+.customPackageFormsInput input::focus {
+    outline: none;
+}
+
+.customFormsIcon {
+    position: absolute;
+    top: 30%;
+    right: 12%;
+    color: var(--gray-color);
+    transform: translatey(-50%);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+}
+
+.customPackageFormsInput input::placeholder {
+    width: 60%;
+    transform: translatey(-50%);
+    font-weight: 200;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 20px ;
+    z-index: 5;
+    color:var(--gray-color);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+}
+
+.customPackageFormsInput.submit {
+    text-align: left;
+    margin-left: 60px;
+     padding: 10px 20px;
+     width: 125px;
+     background: var(--main-color);
+     color: white;
+     border-radius: 10px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     cursor: pointer;
+}
+
+.customPackageFormsInputSubmit {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.checkBoxContainer {
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: -15px;
+}
+
+.checkBoxgrid {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+input[type="checkbox"] { 
+    appearance: none;
+    font: inherit;
+    border: solid currentColor 1px;
+    width: 1em;
+    height: 1em;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+}
+input[type="checkbox"]::before {
+      content: "";
+      position:absolute;
+      width: 0.8em;
+      height: 0.8em;
+      left: 0.8px;
+      top: 1px;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--main-color);
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+}
+    
+    
+    input[type="checkbox"]:checked::before {
+     transform: scale(1) !important;
+    }
+
+
+
+@media (max-width:700px) {
+    .customPackageFormsgrid {
+        flex-direction:column;
+    }
+    .customPackageFormsInformations {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .customPackageFormsInformations h2 {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .customPackageFormsParagraph {
+        margin:auto;
+        width: 80%;
+    }
+    .customPackageFormsInfo {
+        justify-content:center;
+        margin-bottom: 15px;
+    }
+    .customPackageFormsInfoContainer {
+        margin-top: 30px;
+    }
+    .customPackageForms  {
+        width: 100%;
+    }
+    .customPackageFormsInput input:not(.customPackageFormsInputSubmit), textarea {
+        width: 60%;
+    }
+    .customFormsIcon {
+        right: 21%!important;
+    }
+    .customFormsIconTextArea {
+        right: 21%!important;
+    }
+    .customPackageFormsInput.submit {
+        margin: auto;
+    }
+    .customPackageFormsLinks  {
+        flex-direction: column;
+        gap:25px;
+    }
+    .customPackageFormsContainer {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+    .checkBoxContainer {
+        width: 60%;
+    }
+}
+
+@media (max-width:450px) {
+    .customPackageFormsInput input:not(.customPackageFormsInputSubmit), textarea {
+        width: 80%;
+    }
+    .customFormsIcon {
+        right: 12%!important;
+    }
+    .customFormsIconTextArea {
+        right: 12%!important;
+    }
+}
+
+@media (max-width:900px) {
+    .customPackageFormsLinkListContainer {
+        padding: 20px 10px;
+        width: 150px;
+    }
+}

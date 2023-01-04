@@ -1,0 +1,22 @@
+
+
+.companiesBoxes {
+    column-gap: 100px;
+    flex-wrap: wrap;
+}
+
+.companiesBox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.companiesBoxImg {
+    width: 100px;
+}
+
+@media (max-width:590px) {
+    .companiesBoxes {
+        flex-direction: column;
+    }
+}

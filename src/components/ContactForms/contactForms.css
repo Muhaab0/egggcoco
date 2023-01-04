@@ -1,0 +1,238 @@
+.ContactFormsContainer {
+    margin:auto;
+}
+
+.contactFormsInformations {
+    width: 45%;
+}
+
+.contactFormsInformations h2 {
+    width: 70%;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+.contactFormsgrid {
+        margin-top: 80px;
+}
+
+.contactFormsParagraph {
+    color: var(--gray-color);
+    margin-bottom: 35px;
+    line-height: 1.7;
+    width: 60%;
+} 
+
+.contactFormsInfo {
+    margin-bottom: 25px;
+    color: var(--main-color);
+}
+
+
+.contactForms {
+    text-align: center;
+    width: 45%;
+}
+.contactFormsInput {
+    position: relative;
+}
+
+.contactFormsInput input:not(.contactFormsInputSubmit),  textarea {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    padding: 13px 20px;
+    border: solid 1px var(--main-color) ;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.contactFormsInput textarea {
+    height: 150px!important;
+}
+
+.FormsIconTextArea {
+    position: absolute;
+    top: 13%;
+    right: 15%;
+    color: var(--gray-color);
+    transform: translatey(-50%);
+}
+
+.contactFormsInput input::focus {
+    outline: none;
+}
+
+.FormsIcon {
+    position: absolute;
+    top: 30%;
+    right: 65px;
+    color: var(--gray-color);
+    transform: translatey(-50%);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+}
+
+.contactFormsInput input::placeholder {
+    width: 60%;
+    transform: translatey(-50%);
+    font-weight: 200;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 20px ;
+    z-index: 5;
+    color:var(--gray-color);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+}
+
+.contactFormsInput.submit {
+    text-align: left;
+    margin-left: 40px;
+     padding: 10px 20px;
+     width: 125px;
+     background: var(--main-color);
+     color: white;
+     border-radius: 10px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     cursor: pointer;
+}
+
+.contactFormsInputSubmit {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.contactFormsLinks {
+    margin-top: 100px;
+}
+
+.contactFormsLinkListContainer {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background:white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 200px;
+}
+
+.contactFormsLinkListContainer li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: solid 2px var(--main-color);
+    position: relative;
+}
+
+
+.contactFormsLinkIcons {
+    width: 15px;
+    color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
+
+.contactFormsLinks a {
+    text-decoration:none;
+}
+
+.contactFormsLinkListContainer p {
+    color:var(--gray-color);
+    text-decoration:none;
+}
+
+.contactFormsLinkListContainer.instgram {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+@media (max-width:700px) {
+    .contactFormsgrid {
+        flex-direction:column;
+    }
+    .contactFormsInformations {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .contactFormsInformations h2 {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .contactFormsParagraph {
+        margin:auto;
+        width: 80%;
+    }
+    .contactFormsInfo {
+        justify-content:center;
+        margin-bottom: 15px;
+    }
+    .contactFormsInfoContainer {
+        margin-top: 30px;
+    }
+    .contactForms  {
+        width: 100%;
+    }
+    .contactFormsInput input:not(.contactFormsInputSubmit), textarea {
+        width: 60%;
+    }
+    .FormsIcon {
+        right: 13%;
+    }
+    .FormsIconTextArea {
+        right: 13%;
+    }
+    .contactFormsInput.submit {
+        margin: auto;
+    }
+    .contactFormsLinks  {
+        flex-direction: column;
+        gap:25px;
+    }
+    .contactFormsContainer {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+}
+
+@media (max-width:450px) {
+    .contactFormsInput input:not(.contactFormsInputSubmit), textarea {
+        width: 80%;
+    }
+}
+
+@media (max-width:900px) {
+    .contactFormsLinkListContainer {
+        padding: 20px 10px;
+        width: 150px;
+    }
+}

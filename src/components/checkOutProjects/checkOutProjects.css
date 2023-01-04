@@ -1,0 +1,29 @@
+.checkOutProjctsContainer {
+    padding-bottom: 0px!important;
+}
+
+
+.checkOutProjectImg {
+    margin: auto;
+    display: block;
+    position: relative;
+    z-index: 55;
+    max-width: 100%;
+}
+
+.ProjectVector {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+}
+
+.checkOutProjectgrid {
+    margin-top: 80px;
+}
+
+@media (max-width:600px) {
+    .checkOutProjctsContainer  {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+}

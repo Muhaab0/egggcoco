@@ -1,0 +1,124 @@
+.projectBox.blue {
+    background-color: var(--main-color);
+}
+
+.projectBox.yellow {
+    background-color: var(--secondary-color-yellow);
+}
+
+.projectBox.pink {
+    background-color: var(--third-color-pink);
+}
+
+.projectBox.sky {
+    background-color: var(--third-color-blue);
+}
+
+
+.projectBox {
+    position: relative;
+    color: white;
+    margin: auto;
+    padding: 40px;
+    width: 70%;
+    height: 350px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.projectBoxImg{
+    position: absolute;
+    top: 90px;
+    right: 30px;
+}
+
+.projectBoxImg img {
+    width: 100%;
+    max-width: 500px;
+} 
+
+.projectBoxContainer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 50%;
+}
+
+.projectBoxTitle {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.projectBoxHr {
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.projectBoxDescription {
+    width: 60%;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+@media (max-width:1300px) {
+    .projectBox {
+        width: 100%;
+    }
+    .projectBoxImg {
+        top:65px;
+    }
+    .projectBoxImg img {
+        max-width: 550px;
+    }
+}
+
+
+
+@media (max-width:1000px) {
+    .projectBox {
+        flex-direction: column;
+        height: unset;
+    }   
+    .projectBoxImg {
+        position: relative;
+        top: 50px;
+        right: 0;
+        margin: auto;
+    }
+    .projectBoxContainer {
+        margin-bottom: 0;
+        top: 46px;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    
+    }
+    .projectBoxHr{
+        width: 100%;
+    }
+    .projectBoxDescription {
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .projectBoxTitle {
+        font-size: 25px;
+    }
+    .projectsContainer {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+}
+
+
+
+
