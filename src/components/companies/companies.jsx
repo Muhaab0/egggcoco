@@ -21,7 +21,7 @@ export default function Companies() {
                 <img className='companiesBoxImg' src={Amazon} alt="amazon" />
             </div>
 
-            <div className='companiesBox'>
+            <div className='companiesBox '>
                 <img className='companiesBoxImg' src={Jeep} alt="amazon" />
             </div>
 

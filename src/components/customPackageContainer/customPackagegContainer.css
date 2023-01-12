@@ -30,6 +30,7 @@ padding-bottom: 40px!important;
     text-align: center;
     margin-bottom: 20px;
     font-size: 30px;
+    padding: 0 20px;
 }
 
 .customPackageContainerBox > button {
@@ -48,6 +49,7 @@ padding-bottom: 40px!important;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    box-shadow: var(--third-color-pink) 0px 25px 50px -12px;
 }
 
 .customPackageContainerBox button a {

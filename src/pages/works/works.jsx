@@ -5,6 +5,8 @@ import CustomPackageContainer from '../../components/customPackageContainer/cust
 import Footer from '../../components/footer/footer'
 import Navbar from '../../components/navbar/navbar'
 import LatestProjects from '../../components/latestProjects/latestProjects'
+import ScrollToTop from "../../components/scroollToTop/scroollToTop";
+import  WhatsApp  from "../../components/whatsUp/whatsUp";
 
 export default function Works() {
   return (
@@ -15,7 +17,8 @@ export default function Works() {
         <LatestProjects />
         <CustomPackageContainer />
         <Footer />
-        
+        <ScrollToTop/>
+        <WhatsApp/>
     </div>
   )
 }

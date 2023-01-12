@@ -8,8 +8,6 @@ import Works from "./pages/works/works";
 function App() {
   return (
     <div className="App">
-
-
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}/>

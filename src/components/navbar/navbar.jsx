@@ -46,7 +46,7 @@ export default function Navbar() {
         </NavLink>
         </li>
     </ul>
-    <button  className={`btn flex j-between a-center ${isNavOpen ? "block" : ""}`}><Link to="/contactus">Contact us</Link></button>
+    <button  className={`btn btnh flex j-between a-center ${isNavOpen ? "block" : ""}`}><Link to="/contactus">Contact us</Link></button>
     </div>
   )
 }

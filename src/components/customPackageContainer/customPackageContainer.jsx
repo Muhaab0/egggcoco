@@ -9,7 +9,7 @@ export default function CustomPackageContainer() {
             <h6>Are You Ready For</h6>
             <h2>Start a New Custom Package</h2>
             
-            <button><Link to="/custompackage"><p>Start Now</p>  <EastIcon style={{fontWeight:"200"}} /> </Link></button>
+            <button className='btnh'><Link to="/custompackage"><p>Start Now</p>  <EastIcon style={{fontWeight:"200"}} /> </Link></button>
             
             </div>
     </div>

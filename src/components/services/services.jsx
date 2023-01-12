@@ -1,19 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './services.css'
-import serviceBox from '../utilis/service'
-import Ideat from '../../assets/ideat.png'
-import App from '../../assets/App.png'
-import Programing from '../../assets/Programing.png'
-import Design from '../../assets/Design.png'
-import Busines from '../../assets/Busines.png'
-import Marketing from '../../assets/Marketing.png'
+import servicesBox from "../utilis/service"
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Vector from "../../assets/HomeVector.png"
 import CloseIcon from '@mui/icons-material/Close';
+import axios from 'axios'
 
 export default function Services() {
-
+  const [serviceBox, setServicesBox] = useState([]);
   const [isOpen, setIsOpen] = useState("");
+  
+  useEffect(() => {
+    const getServices = async() => {
+      try {
+        const res = await axios.get("/service/all/")
+        setServicesBox(res.data.results)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getServices()
+  }, [])
+  
   return (
     <div className='servicesContainer main-padding'>
     <div className='servicesHeader'>
@@ -23,9 +31,9 @@ export default function Services() {
         <div className='serviceBoxes flex a-center j-center'>
         {
             serviceBox.map((box)=>(
-                <div className='serviceBox'  onClick={()=> setIsOpen(box)}>
-                <img src={require(`../../assets/${box.img}`)} alt="serviceImg" />
-                    <p className='serviceBoxtitle'>{box.title}</p>
+                <div className='serviceBox'  onClick={()=> setIsOpen(box)} key={box.id}>
+                <img src={box.icon} alt="serviceImg" />
+                    <p className='serviceBoxtitle'>{box.name}</p>
                     <p className='serviceBoxDesc'>{box.description}</p>
                     <div className='serviceIcon'>
                         <ChevronRightIcon className='serviceIconsvg'/>

@@ -27,7 +27,7 @@ export default function Faq() {
             {
                 faq.map((fq , i) => {
                     return(
-                        <div className='faq'>
+                        <div className='faq' key={i}>
 
                         <div className='content'>
 

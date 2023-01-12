@@ -1,0 +1,94 @@
+.teamBox {
+    background-color: #fbfbfb;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+
+.teamBoxes {
+    flex-wrap: wrap;
+}
+.teamBoxImage.Graphic  {
+    background-color: var(--main-color);
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.teamBoxImage.Networking  {
+    background-color: var(--secondary-color-yellow);
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.teamBoxImage.Product  {
+    background-color: var(--third-color-pink);
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.teamBoxImg {
+    object-fit: contain;
+    height: 230px;
+    width: 300px;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
+.teamBox h6 {
+    color: black;
+}
+
+.teamBox p {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+
+
+
+
+
+@media (max-width:700px) {
+    .teamBoxes {
+        flex-direction: column;
+    }
+    .teamBoxImage {
+        width: 350px!important;
+    }
+}
+
+@media (max-width:400px) {
+    .teamBoxImage {
+        width: 270px!important;
+    }
+}

@@ -12,6 +12,8 @@
 .aboutContentBox img {
     top: 80px;
     position: absolute;
+    left: -5%;
+    max-width: 100%;
 }
 
 .aboutContentBox h2 {
@@ -20,7 +22,7 @@
     width: 50%;
     text-align: center;
     margin-bottom: 40px;
-    font-size: 45px;
+    font-size: 35px;
 }
 
 .aboutContentBox p {
@@ -28,4 +30,27 @@
     margin: auto;
     text-align: center;
     color: var(--gray-color);
+}
+
+
+@media (max-width:800px) {
+    .aboutContentBox h2 {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width:600px) {
+    .aboutContentBox h2 {
+        width: 100%;
+    }
+    .aboutContentBox p {
+        width: 100%;
+    }
+    .aboutContentBox {
+        padding: 40px;
+    }
+    .aboutContentBox h2 {
+        font-size: 23px;
+    }
 }

@@ -8,7 +8,7 @@ export default function LatestProjects() {
     <h6 className='subHeader'>Our Latest Project</h6>
     <h2 className='subTitleHeader'>This is the last variety of projects we have worked on</h2>
     {projects.map((proj)=>(
-        <div className={`projectBox ${proj.color}  flex`}>
+        <div className={`projectBox ${proj.color}  flex`} key={proj.title}>
             <div className='projectBoxContainer'>
             <div className='projectBoxTitle'>{[proj.title]}</div>
             <hr className='projectBoxHr'/>

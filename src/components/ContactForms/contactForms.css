@@ -36,9 +36,10 @@
     position: relative;
 }
 
-.contactFormsInput input:not(.contactFormsInputSubmit),  textarea {
+.contactFormsInput input:not(.contactFormsInputSubmit),.contactPhoneInput,  textarea {
     width: 80%;
     height: 50px;
+    margin: auto;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -55,22 +56,26 @@
     height: 150px!important;
 }
 
-.FormsIconTextArea {
+.FormsIconTextArea  {
     position: absolute;
     top: 13%;
-    right: 15%;
+    right: 12%;
     color: var(--gray-color);
     transform: translatey(-50%);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
 }
 
 .contactFormsInput input::focus {
     outline: none;
 }
 
-.FormsIcon {
+.FormsIcon , .contactFormsIcon {
     position: absolute;
     top: 30%;
-    right: 65px;
+    right: 12%;
     color: var(--gray-color);
     transform: translatey(-50%);
     -webkit-transform: translatey(-50%);
@@ -98,7 +103,6 @@
 .contactFormsInput.submit {
     text-align: left;
     margin-left: 40px;
-     padding: 10px 20px;
      width: 125px;
      background: var(--main-color);
      color: white;
@@ -110,11 +114,14 @@
      cursor: pointer;
 }
 
+
 .contactFormsInputSubmit {
     background-color: transparent;
     border: none;
     color: white;
     cursor: pointer;
+    padding: 10px;
+    margin: auto;
 }
 
 .contactFormsLinks {
@@ -169,9 +176,7 @@
     text-decoration:none;
 }
 
-.contactFormsLinkListContainer.instgram {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-}
+   
 
 @media (max-width:700px) {
     .contactFormsgrid {
@@ -202,14 +207,14 @@
     .contactForms  {
         width: 100%;
     }
-    .contactFormsInput input:not(.contactFormsInputSubmit), textarea {
+    .contactFormsInput input:not(.contactFormsInputSubmit),.contactPhoneInput, textarea {
         width: 60%;
     }
-    .FormsIcon {
-        right: 13%;
+    .FormsIcon , .contactFormsIcon{
+        right: 22%;
     }
     .FormsIconTextArea {
-        right: 13%;
+        right: 22%;
     }
     .contactFormsInput.submit {
         margin: auto;
@@ -222,11 +227,21 @@
         padding-left: 20px!important;
         padding-right: 20px!important;
     }
+    .contactFormsLinkListContainer {
+        width: 220px!important;
+        
+    }
 }
 
 @media (max-width:450px) {
-    .contactFormsInput input:not(.contactFormsInputSubmit), textarea {
+    .contactFormsInput input:not(.contactFormsInputSubmit),.contactPhoneInput, textarea {
         width: 80%;
+    }
+    .FormsIcon, .contactFormsIcon {
+        right: 12%;
+    }
+    .FormsIconTextArea {
+        right: 12%;
     }
 }
 

@@ -51,6 +51,7 @@
 .packageName {
     font-size: 20px;
     font-weight: 400;
+    margin-bottom: 10px;
 }
 .packageDescription {
     margin-top: 10px;
@@ -134,9 +135,8 @@
 
 .packagePopup {
     background-color: var(--main-color);
-    padding: 50px;
+    padding: 25px;
     width: 300px;
-    height: 400px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -179,7 +179,7 @@
     }
 
     .packageBox {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -199,33 +199,53 @@
     position: relative;
 }
 
-.packageFormsInput input:not(.packageFormsInputSubmit),  .packageTextArea {
-    width: 100%;
-    height: 35px;
+.packagePhoneInput  {    
+    margin: auto;
+    margin-bottom: 15px;
+    background: white;
+}
+
+
+
+
+.packageFormsInput input:not(.packageFormsInputSubmit),.packagePhoneInput ,  .packageTextArea {
+    width: 90%!important;
+    height: 40px!important;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     border: none;
-    padding: 8px 10px;
     border: solid 1px var(--main-color) ;
     outline: none;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: black;
+    padding: 0 10px;
 }
 
 .packageFormsInput textarea {
     height: 100px!important;
 }
+.packageFormsPhone {
+    position: relative;
+}
+
+.packageFormsPhone svg {
+    top: 45%;
+}
 
 .packagesFormsIconTextArea {
     position: absolute;
-    top: 15%;
-    right: 2%;
+    top: 70%;
+    right: 8%;
     font-size: 20px;
     color: var(--gray-color);
     transform: translatey(-50%);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
 }
 
 .packageFormsInput input::focus {
@@ -234,8 +254,8 @@
 
 .packagesFormsIcon {
     position: absolute;
-    top: 30%;
-    right: 2%;
+    top: 35%;
+    right: 8%;
     font-size: 20px;
     color: var(--gray-color);
     transform: translatey(-50%);
@@ -266,7 +286,7 @@
     margin: auto;
     padding: 8px 10px;
     width: 110px;
-     background: var(--main-color);
+     /* background: var(--third-color-pink); */
      color: white;
      border-radius: 10px;
      -webkit-border-radius: 10px;
@@ -274,13 +294,14 @@
      -ms-border-radius: 10px;
      -o-border-radius: 10px;
      cursor: pointer;
-}
-
-.packageForms.submit svg {
-    font-size: 20px;
-}
-
-.packageFormsInputSubmit {
+    }
+    
+    .packageForms.submit svg {
+        font-size: 20px;
+    }
+    
+    .packageFormsInputSubmit {
+    margin: auto;
     background-color: transparent;
     border: none;
     color: white;
@@ -288,18 +309,18 @@
 }
 
 
+
 @media (min-width:650px) {
     .packagePopup {
-    margin-top: 35px;
+    margin-top: 25px;
     width: 600px;
-    height: 500px;
     }
-    .packageFormsInput input:not(.packageFormsInputSubmit), .packageTextArea {
-    width: 50%;
-    height: 43px;
-    }
+    .packageFormsInput input:not(.packageFormsInputSubmit),.packagePhoneInput , .packageTextArea {
+        width: 70%!important;
+        height: 43px;
+    }   
     .packagesFormsIcon , .packagesFormsIconTextArea  {
-        right: 26%;
+        right: 18%;
         font-size: 25px!important;
     }
     .packageFormsInput textarea {
@@ -310,7 +331,17 @@
         width: 120px;
     }
     .packageFormsInput input:not(.packageFormsInputSubmit), .packageTextArea { 
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
+    .form-control   {
+        padding: 0 40px!important; 
+        width: 52%!important; 
+        margin-right: -10px!important;
+    } 
+    .react-tel-input .flag-dropdown { 
+        top: 0px!important;
+        left: 140px;
+    }
+    
     
 }

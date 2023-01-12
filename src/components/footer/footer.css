@@ -115,6 +115,7 @@
     .footerContact {
         width: 30%;
         margin-top: 20px;
+        margin-left: 50px;
     }
 
     .footerContact h4 {
@@ -192,6 +193,7 @@
         }
         .footerContact {
             width: 100%;
+            margin-left: 0!important;
         }
 
         .footerContact h4 {

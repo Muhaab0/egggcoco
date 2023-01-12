@@ -37,9 +37,19 @@
     position: relative;
 }
 
-.customPackageFormsInput input:not(.customPackageFormsInputSubmit),  textarea {
-    width: 80%;
-    height: 50px;
+.PhoneInputInput,.PhoneInputInput:focus{
+    border: none!important;
+    outline: none;
+}
+
+.customPhoneInput {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.customPackageFormsInput input:not(.customPackageFormsInputSubmit), .customPhoneInput,  textarea {
+    width: 80%!important;
+    height: 50px!important;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -98,8 +108,9 @@
 
 .customPackageFormsInput.submit {
     text-align: left;
-    margin-left: 60px;
-     padding: 10px 20px;
+    width: 125px;
+    margin-top: 10px;
+    margin: auto;
      width: 125px;
      background: var(--main-color);
      color: white;
@@ -110,12 +121,22 @@
      -o-border-radius: 10px;
      cursor: pointer;
 }
+.customPackageFormsPhone {
+    position: relative;
+}
+
+
+.customPackageFormsPhone svg {
+    top: 45%;
+}
 
 .customPackageFormsInputSubmit {
     background-color: transparent;
     border: none;
     color: white;
     cursor: pointer;
+    padding: 10px;
+    margin: auto;
 }
 .checkBoxContainer {
     flex-direction: column;
@@ -142,25 +163,33 @@ input[type="checkbox"] {
     transform: translateY(-0.075em);
 }
 input[type="checkbox"]::before {
-      content: "";
-      position:absolute;
-      width: 0.8em;
-      height: 0.8em;
-      left: 0.8px;
-      top: 1px;
-      transform: scale(0);
-      transition: 120ms transform ease-in-out;
-      box-shadow: inset 1em 1em var(--main-color);
-      -webkit-transform: scale(0);
-      -moz-transform: scale(0);
-      -ms-transform: scale(0);
-      -o-transform: scale(0);
+    content: "";
+    position:absolute;
+    width: 0.7em;
+    height: 0.7em;
+    left: 50%;
+    top: 50%;
+    transform:scale(0) ;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--main-color);
+    -webkit-transform:scale(0) ;
+    -moz-transform:scale(0) ;
+    -ms-transform:scale(0) ;
+    -o-transform:scale(0) ;
+    -webkit-transition: 120ms transform ease-in-out;
+    -moz-transition: 120ms transform ease-in-out;
+    -ms-transition: 120ms transform ease-in-out;
+    -o-transition: 120ms transform ease-in-out;
 }
     
     
     input[type="checkbox"]:checked::before {
-     transform: scale(1) !important;
-    }
+        transform: translate(-50%,-50%)  scale(1);
+        -webkit-transform: translate(-50%,-50%)  scale(1);
+        -moz-transform: translate(-50%,-50%)  scale(1);
+        -ms-transform: translate(-50%,-50%)  scale(1);
+        -o-transform: translate(-50%,-50%)  scale(1);
+}
 
 
 
@@ -193,8 +222,8 @@ input[type="checkbox"]::before {
     .customPackageForms  {
         width: 100%;
     }
-    .customPackageFormsInput input:not(.customPackageFormsInputSubmit), textarea {
-        width: 60%;
+    .customPackageFormsInput input:not(.customPackageFormsInputSubmit),.customPhoneInput, textarea {
+        width: 60%!important;
     }
     .customFormsIcon {
         right: 21%!important;
@@ -219,8 +248,8 @@ input[type="checkbox"]::before {
 }
 
 @media (max-width:450px) {
-    .customPackageFormsInput input:not(.customPackageFormsInputSubmit), textarea {
-        width: 80%;
+    .customPackageFormsInput input:not(.customPackageFormsInputSubmit), .customPhoneInput , textarea {
+        width: 80%!important;
     }
     .customFormsIcon {
         right: 12%!important;

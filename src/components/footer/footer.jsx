@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Arrow from "../../assets/Send.png";
 import "./footer.css";
 import logo from "../../assets/Logo2.png";
@@ -7,20 +7,22 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { NavLink, Link } from "react-router-dom";
-import Home from "../../pages/home/home";
-import Works from "../../pages/works/works";
-import About from "../../pages/about/about";
+import { NavLink } from "react-router-dom";
+
 
 export default function Footer() {
+  const [subcribe, setsubcribe] = useState("")
   return (
     <div className="footerContainer">
       <div className="footerContactBox">
         <h6>Get Notified About Projects</h6>
         <h2>Subscribe Now</h2>
         <div className="footerInputContainer">
-          <input type="email" name="email" id="email" placeholder="Email" />
-          <button>
+          <input type="email" name="email" id="email" placeholder="Email"  onChange={(e)=> setsubcribe(e.target.value)}/>
+          <button onClick={ (e) => {
+             window.location.reload(true)
+          }
+          }>
             <img src={Arrow} alt="arrow" />
           </button>
         </div>
@@ -29,7 +31,7 @@ export default function Footer() {
         <div className="footerTop  flex  j-between">
 
         <div className="footerAbout">
-          <img src={logo} alt="logo" className="footerLogo" />
+          <img src={logo} alt="logo" className="footerLogo " />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -66,10 +68,10 @@ export default function Footer() {
         </ul>
 
             <ul className="footerPlatForms flex a-center j-between">
-                <li className="platFromsIcons"><a href="#"><FacebookIcon className="platFormIconsicon" /></a></li>
-                <li className="platFromsIcons"><a href="#"><InstagramIcon className="platFormIconsicon" /></a></li>
-                <li className="platFromsIcons"><a href="#"><LinkedInIcon className="platFormIconsicon" /></a></li>
-                <li className="platFromsIcons"><a href="#"></a><TwitterIcon className="platFormIconsicon" /></li>
+                <li className="platFromsIcons btnh"><a href="#"><FacebookIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href="#"><InstagramIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href="#"><LinkedInIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href="#"><TwitterIcon className="platFormIconsicon" /></a></li>
             </ul>
       </div>
         </div>

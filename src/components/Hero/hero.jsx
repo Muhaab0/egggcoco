@@ -25,7 +25,7 @@ export default function Hero() {
                     <p>We provide various services to make your business grow and get bigger. Your satisfaction is our first priority.</p>
                 </div>
 
-                <button className='heroBtn flex a-center '>
+                <button className='heroBtn btnh flex a-center '>
                 <p>
                 Get Started
                 </p>

@@ -1,13 +1,16 @@
 
 
 .companiesBoxes {
-    column-gap: 100px;
+    column-gap: 150px;
     flex-wrap: wrap;
+    z-index: 55555;
+    position: relative;
 }
 
 .companiesBox {
     margin-top: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 
