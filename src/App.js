@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route , HashRouter } from "react-router-dom";
 import About from "./pages/about/about";
 import Contactus from "./pages/contactus/contactus";
 import CustomPackage from "./pages/customPackage/customPackage";
@@ -8,7 +8,7 @@ import Works from "./pages/works/works";
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/desa" element={<Home />}/>
         <Route path="/egcoco4" element={<Home />}/>
@@ -18,7 +18,7 @@ function App() {
         <Route path="/contactus" element={<Contactus />}/>
         <Route path="/custompackage" element={<CustomPackage />}/>
         </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </div>
   );
 }
