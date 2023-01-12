@@ -1,8 +1,5 @@
 {
-  "homepage": "https://Muhaab0.github.io/egcoco2",
-  "name": "egcoco",
-  "version": "0.1.0",
-  "private": true,
+  "homepage": "https://Muhaab0.github.io/egcoco3",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
