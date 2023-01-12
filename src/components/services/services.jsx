@@ -9,7 +9,6 @@ import axios from 'axios'
 export default function Services() {
   const [serviceBox, setServicesBox] = useState([]);
   const [isOpen, setIsOpen] = useState("");
-  
   useEffect(() => {
     const getServices = async() => {
       try {
@@ -31,7 +30,7 @@ export default function Services() {
         <div className='serviceBoxes flex a-center j-center'>
         {
             serviceBox.map((box)=>(
-                <div className='serviceBox'  onClick={()=> setIsOpen(box)} key={box.id}>
+                <div className='serviceBox'  onClick={(e)=> setIsOpen(box)} key={box.id}>
                 <img src={box.icon} alt="serviceImg" />
                     <p className='serviceBoxtitle'>{box.name}</p>
                     <p className='serviceBoxDesc'>{box.description}</p>
@@ -44,7 +43,7 @@ export default function Services() {
         
         <div className={`servicesPopup ${isOpen ? "show" : ""}`}>
         <CloseIcon onClick={(e) => setIsOpen("")} className="servicesPopupIcon"/>
-          <h2>{isOpen.title}</h2>
+          <h2>{isOpen.name}</h2>
           <p>{isOpen.description}</p>
         </div>
             

@@ -16,6 +16,7 @@
 .serviceBox {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 250px;
+    height: 350px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -58,6 +59,8 @@ margin: 15px 0;
     font-size: 15px;
     margin-bottom: 30px;
     line-height: 1.7;
+    height: 28%;
+    overflow: hidden;
 }
 
 .serviceBox img {
@@ -133,6 +136,10 @@ margin: 15px 0;
     margin-bottom: 50px;
 }
 
+.servicesPopup p {
+    overflow: auto;
+    height: 75%;
+}
 .servicesPopupIcon {
     color: white;
     cursor: pointer;
@@ -140,6 +147,20 @@ margin: 15px 0;
     top: 10px;
     position: absolute;
 }
+
+
+.servicesPopup p::-webkit-scrollbar {
+    width:2px;
+    background:white;
+    padding-left: 20px;
+}
+.servicesPopup p::-webkit-scrollbar-thumb  {
+      padding-right: 20px;
+    background:black;
+  
+  }
+
+
 
 
 
