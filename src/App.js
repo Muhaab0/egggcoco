@@ -8,16 +8,15 @@ import Works from "./pages/works/works";
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route path="/egcoco5" element={<Home />}/>
         <Route path="/" element={<Home />}/>
         <Route path="/ourworks" element={<Works />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/contactus" element={<Contactus />}/>
         <Route path="/custompackage" element={<CustomPackage />}/>
         </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </div>
   );
 }
