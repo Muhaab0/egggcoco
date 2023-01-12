@@ -8,7 +8,7 @@ import Works from "./pages/works/works";
 function App() {
   return (
     <div className="App">
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/desa" element={<Home />}/>
         <Route path="/egcoco4" element={<Home />}/>
@@ -18,7 +18,7 @@ function App() {
         <Route path="/contactus" element={<Contactus />}/>
         <Route path="/custompackage" element={<CustomPackage />}/>
         </Routes>
-        </HashRouter>
+        </BrowserRouter>
     </div>
   );
 }
