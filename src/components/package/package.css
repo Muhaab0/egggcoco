@@ -11,12 +11,15 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    width: 400px;
+    width: 100%;
     color: #231D4F;
     padding: 0 20px;
     position: relative;
     z-index: 555;
     background-color: white;
+    padding: 25px;
+    margin: auto;
+
 }
 
 
@@ -167,7 +170,7 @@
     display: block;
 }
 
-@media (max-width:800px) {
+@media (max-width:950px) {
     .packageBoxes {
         flex-direction: column;
 
@@ -179,7 +182,7 @@
     }
 
     .packageBox {
-        width: 80%;
+        width: 90%;
     }
 }
 
