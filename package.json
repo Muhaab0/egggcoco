@@ -1,7 +1,8 @@
 {
   "homepage": "https://Muhaab0.github.io/egycocos0/",
-  "name": "starter-project",
+  "name": "egycocos0",
   "version": "0.1.0",
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
