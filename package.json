@@ -1,8 +1,9 @@
 {
-  "homepage": "https://Muhaab0.github.io/egycocos0/",
-  "name": "egycocos0",
-  "version": "0.1.0",
-  "private": false,
+    "homepage": "https://Muhaab0.github.io/egycocos0/",
+    "name": "egycocos0",
+    "version": "0.1.0",
+    "private": false,
+    "proxy": "http://egcoco.pythonanywhere.com/api/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -23,7 +24,6 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "http://egcoco.pythonanywhere.com/api/",
   "scripts": {
     "predeplay": "npm run build",
     "deploy": "gh-pages -d build",
