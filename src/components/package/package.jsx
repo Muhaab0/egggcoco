@@ -25,7 +25,7 @@ export default function Package() {
     const inputRef = useRef(null);
     const [err, setErr] = useState([]);
     const navigate = useNavigate();
-
+  console.log(packageBoxs)
     useEffect(() => {
         const getPackage = async() => {
           try {
@@ -54,11 +54,10 @@ export default function Package() {
             package:+openModal.id
           }
           try {
-            const res = await axios.post(`/package-order/create/`, form )
+            const res = await axios.post(`/package-order/create/`,  form )
             const name = form.customer.name
-            window.location.reload(true)
+            setOpenModal(false)
             navigate("/" ,{state:{name}})
-            console.log(res)
           } catch (error) {
             setErr(error.response.data.customer.phone_number)
             setLoading(false)

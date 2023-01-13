@@ -1,11 +1,10 @@
 {
-    "homepage": "https://Muhaab0.github.io/egycoco2/",
+    "homepage": "https://Muhaab0.github.io/egycocoo/",
     "name": "egycocos0",
     "version": "0.1.0",
     "private": false,
-    "proxy": "http://egcoco.pythonanywhere.com/api/",
-  "dependencies": {
-    "@emotion/react": "^11.10.5",
+    "dependencies": {
+      "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.2",
