@@ -9,7 +9,7 @@
   a {
     position: fixed;
     bottom: 20px;
-    right: 40px;
+    right: 10px;
     border: 1px solid var(--main-color);
     border-radius: 50%;
     width: 30px;

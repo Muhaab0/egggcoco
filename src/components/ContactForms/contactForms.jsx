@@ -1,4 +1,4 @@
-import { useState  } from "react";
+import { useEffect, useState  } from "react";
 import axios from "axios"
 import "./contactForms.css"
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -8,7 +8,6 @@ import ApartmentIcon from '@mui/icons-material/Apartment';
 import CallIcon from '@mui/icons-material/Call';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import {useNavigate } from "react-router-dom";
 import 'react-phone-number-input/style.css'
@@ -23,6 +22,19 @@ export default function ContactForms() {
   const [loading, setLoading] = useState(false);
   const [errors, setError] = useState([]);
   const navigate = useNavigate();
+  const [links, setLinks] = useState("")
+  console.log(links.whatsapp_link)
+  useEffect(() => {
+    const getLinks = async() => {
+      try {
+        const res = await axios.get("/main-info/")
+        setLinks(res.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getLinks()
+  }, [])
 
   
   const handleSubmit = async (e) => {
@@ -109,7 +121,7 @@ export default function ContactForms() {
 
         <ul className='contactFormsLinks flex a-center  j-evenly'>
 
-          <a href="#">
+          <a href={links.facebook}>
         <div className='contactFormsLinkListContainer btnh flex a-center j-center gap-small'>
           <li>
           <FacebookIcon className='contactFormsLinkIcons'/> 
@@ -118,7 +130,7 @@ export default function ContactForms() {
         </div>
           </a>
 
-          <a href="#">
+          <a href={links.instagram}>
           <div className='contactFormsLinkListContainer btnh instgram flex j-center a-center gap-small'>
           <li>
           <InstagramIcon className='contactFormsLinkIcons'/> 
@@ -127,16 +139,8 @@ export default function ContactForms() {
           </div>
           </a>
 
-          <a href="#">
-          <div className='contactFormsLinkListContainer btnh  flex a-center j-center gap-small'>
-          <li>
-          <LinkedInIcon className='contactFormsLinkIcons'/> 
-          </li>
-          <p>Linkdin</p>
-          </div>
-          </a>
 
-          <a href='#'>
+          <a href={links.twitter}>
           <div className='contactFormsLinkListContainer btnh flex a-center j-center gap-small'>
           <li>
           <TwitterIcon className='contactFormsLinkIcons'/> 

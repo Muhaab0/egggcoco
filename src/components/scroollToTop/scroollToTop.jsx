@@ -9,7 +9,7 @@ function ScrollToTop() {
 
   return (
     <div className="scroolToTop">
-      <a href="#" className={`${visible ? "block" : "none"}`}>
+      <a href="/" className={`${visible ? "block" : "none"}`}>
         <ArrowDropUpIcon className="ScrollToTopIcon"/>
       </a>
     </div>

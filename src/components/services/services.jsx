@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './services.css'
-import servicesBox from "../utilis/service"
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Vector from "../../assets/HomeVector.png"
 import CloseIcon from '@mui/icons-material/Close';

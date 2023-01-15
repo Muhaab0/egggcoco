@@ -10,7 +10,7 @@ export default function Navbar() {
   const html = document.querySelector("html");
   html.addEventListener("click", (e) => setIsNavOpen(false));
 
-  const [visible, setVisible] = useState(false);
+  const [setVisible] = useState(false);
   window.addEventListener("scroll", () => window.pageYOffset > 200 ? setVisible(true) : setVisible(false));
   return (
     <div className='container flex j-between a-center main-padding '>

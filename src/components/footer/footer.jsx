@@ -5,20 +5,20 @@ import logo from "../../assets/logo2.svg";
 import Map from "../../assets/Map.png";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 
 export default function Footer() {
-  const [subcribe, setsubcribe] = useState("")
+  const [setsubcribe] = useState("")
   const [links, setLinks] = useState("")
+  console.log(links.whatsapp_link)
   useEffect(() => {
     const getLinks = async() => {
       try {
         const res = await axios.get("/main-info/")
-        setLinks(res.data.results)
+        setLinks(res.data)
       } catch (error) {
         console.log(error)
       }
@@ -81,10 +81,10 @@ export default function Footer() {
         </ul>
 
             <ul className="footerPlatForms flex a-center j-between">
-                <li className="platFromsIcons btnh"><a href="#"><FacebookIcon className="platFormIconsicon" /></a></li>
-                <li className="platFromsIcons btnh"><a href="#"><InstagramIcon className="platFormIconsicon" /></a></li>
-                <li className="platFromsIcons btnh"><a href="#"><LinkedInIcon className="platFormIconsicon" /></a></li>
-                <li className="platFromsIcons btnh"><a href="#"><TwitterIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href={links.facebook}><FacebookIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href={links.instagram}><InstagramIcon className="platFormIconsicon" /></a></li>
+                {/* <li className="platFromsIcons btnh"><a href={links.telegram}><LinkedInIcon className="platFormIconsicon" /></a></li> */}
+                <li className="platFromsIcons btnh"><a href={links.twitter}><TwitterIcon className="platFormIconsicon" /></a></li>
             </ul>
       </div>
         </div>

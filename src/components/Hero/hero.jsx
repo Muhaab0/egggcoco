@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 export default function Hero() {
 
   return (
-    <div className='heroContainer main-padding flex a-center j-between'>
+    <div  className='heroContainer  main-padding flex a-center j-between'>
         <div className="heroText">
 
         <div className='heroImage'>
