@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.04011523.css",
+    "main.js": "/static/js/main.da187e60.js",
+    "static/media/Group 10108.png": "/static/media/Group 10108.4b1af7ed6c03509ae418.png",
+    "static/media/CheckOutProjects.png": "/static/media/CheckOutProjects.72a691269c7fb0ec13d4.png",
+    "static/media/Burger.png": "/static/media/Burger.052e9ec3575f2c0f1eb5.png",
+    "static/media/Shopipi.png": "/static/media/Shopipi.f0fac2a4e34473e4b0e9.png",
+    "static/media/avatar1.png": "/static/media/avatar1.bbced79e444e684e1d25.png",
+    "static/media/Coffe.png": "/static/media/Coffe.aeacdae0fc4d181dbcdd.png",
+    "static/media/Popcorn.png": "/static/media/Popcorn.692a05759976348f3f13.png",
+    "static/media/avatar3.png": "/static/media/avatar3.7a6500e8dd3855ffd157.png",
+    "static/media/M'Course.png": "/static/media/M'Course.37eb484d34fb8a4837d5.png",
+    "static/media/Women_avatar.png": "/static/media/Women_avatar.09191aed40fb7f2056fd.png",
+    "static/media/avatar2.png": "/static/media/avatar2.09191aed40fb7f2056fd.png",
+    "static/media/Girl2.png": "/static/media/Girl2.c75ba489b537ae98ac30.png",
+    "static/media/Alpaca.png": "/static/media/Alpaca.b84425d2f4b080902364.png",
+    "static/media/GirlImage.png": "/static/media/GirlImage.f73802a4db794f0e49e3.png",
+    "static/media/ProjectVector.png": "/static/media/ProjectVector.814a4a137587c7871b5c.png",
+    "static/media/ContentVector.png": "/static/media/ContentVector.f64174f848bb00c0a5c3.png",
+    "static/media/ideat.png": "/static/media/ideat.cd0c646b0efc7affc4fa.png",
+    "static/media/Programing.png": "/static/media/Programing.41bf301ae87e52a3db09.png",
+    "static/media/Web.png": "/static/media/Web.41bf301ae87e52a3db09.png",
+    "static/media/Digital.png": "/static/media/Digital.40b536467aa872f3b75a.png",
+    "static/media/Marketing.png": "/static/media/Marketing.40b536467aa872f3b75a.png",
+    "static/media/Busines.png": "/static/media/Busines.deb8160549e379c9fcc8.png",
+    "static/media/App.png": "/static/media/App.6dc8e7cb5f4f2cc19972.png",
+    "static/media/Design.png": "/static/media/Design.0eb939065cc94b5e62a8.png",
+    "static/media/HomeVector.png": "/static/media/HomeVector.37ef698e9f06ad7927c0.png",
+    "static/media/Map.png": "/static/media/Map.dd257dab154877880474.png",
+    "static/media/BlueVector.png": "/static/media/BlueVector.9c04d2078f2e783f4330.png",
+    "static/media/Shape 3.png": "/static/media/Shape 3.9c04d2078f2e783f4330.png",
+    "static/media/logo.svg": "/static/media/logo.0a72bdf668b58fa56093d95a03a2926b.svg",
+    "static/media/logo2.svg": "/static/media/logo2.d72cee2ba574be480943413a6b107638.svg",
+    "index.html": "/index.html",
+    "main.04011523.css.map": "/static/css/main.04011523.css.map",
+    "main.da187e60.js.map": "/static/js/main.da187e60.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04011523.css",
+    "static/js/main.da187e60.js"
+  ]
+}
