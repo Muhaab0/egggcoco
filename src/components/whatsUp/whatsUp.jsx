@@ -8,7 +8,7 @@ function WhatsApp() {
   useEffect(() => {
     const getLinks = async() => {
       try {
-        const res = await axios.get("/main-info/")
+        const res = await axios.get("/api/main-info/")
         setLinks(res.data)
       } catch (error) {
         console.log(error)

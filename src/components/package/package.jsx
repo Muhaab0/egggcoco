@@ -28,7 +28,7 @@ export default function Package() {
     useEffect(() => {
         const getPackage = async() => {
           try {
-            const res = await axios.get("/package/all/")
+            const res = await axios.get("/api/package/all/")
             setPackageBoxs(res.data.results)
           } catch (error) {
             console.log(error)
@@ -54,7 +54,7 @@ export default function Package() {
             package:+openModal.id
           }
           try {
-            await axios.post(`/package-order/create/`,  form )
+            await axios.post(`/api/package-order/create/`,  form )
             const name = form.customer.name
             setOpenModal(false)
             navigate("/" ,{state:{name}})

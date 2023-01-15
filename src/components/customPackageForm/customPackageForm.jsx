@@ -27,7 +27,7 @@ export default function CustomPackageForm() {
   useEffect(() => {
     const getServices = async() => {
       try {
-        const res = await axios.get("/service/all/")
+        const res = await axios.get("/api/service/all/")
         setService(res.data.results)
       } catch (error) {
         console.log(error)
@@ -64,7 +64,7 @@ export default function CustomPackageForm() {
         services:checkList
     }
     try {
-      await axios.post(`/custom-order/create/`, form )
+      await axios.post(`/api/custom-order/create/`, form )
       const name = form.customer.name
       navigate("/" ,{state:{name}})
     } catch (error) {

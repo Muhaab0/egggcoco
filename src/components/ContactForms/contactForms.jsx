@@ -27,7 +27,7 @@ export default function ContactForms() {
   useEffect(() => {
     const getLinks = async() => {
       try {
-        const res = await axios.get("/main-info/")
+        const res = await axios.get("/api/main-info/")
         setLinks(res.data)
       } catch (error) {
         console.log(error)
@@ -48,7 +48,7 @@ export default function ContactForms() {
       "note":message
     }
     try {
-      await axios.post(`/contact-us/`, form )
+      await axios.post(`/api/contact-us/`, form )
       const name = form.name
       navigate("/" ,{state:{name}})
     } catch (error) {

@@ -13,11 +13,10 @@ import axios from "axios";
 export default function Footer() {
   const [setsubcribe] = useState("")
   const [links, setLinks] = useState("")
-  console.log(links.whatsapp_link)
   useEffect(() => {
     const getLinks = async() => {
       try {
-        const res = await axios.get("/main-info/")
+        const res = await axios.get("/api/main-info/")
         setLinks(res.data)
       } catch (error) {
         console.log(error)

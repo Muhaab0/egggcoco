@@ -7,7 +7,7 @@ const [team, setTeam] = useState([])
   useEffect(() => {
     const getTeam = async() => {
       try {
-        const res = await axios.get("/team-member/all/")
+        const res = await axios.get("/api/team-member/all/")
         setTeam(res.data.results)
       } catch (error) {
         console.log(error)
