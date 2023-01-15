@@ -28,6 +28,7 @@ export default function ContactForms() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
+    setError([])
     const form = {
       "name":name,
       "email":email,
@@ -35,7 +36,7 @@ export default function ContactForms() {
       "note":message
     }
     try {
-      const res = await axios.post(`/contact-us/`, form )
+      await axios.post(`/contact-us/`, form )
       const name = form.name
       navigate("/" ,{state:{name}})
     } catch (error) {
@@ -66,7 +67,7 @@ export default function ContactForms() {
             <div className='packageFormsPhone'>
             <PhoneInput
             className='contactPhoneInput'
-            placeholder="Enter phone number"
+            placeholder="Phone"
             value={phone}
             required
             country={'eg'}
@@ -80,7 +81,7 @@ export default function ContactForms() {
             </div>
 
             <div className='contactFormsInput'>
-            <textarea name="message" id="message" cols="55"  rows="5" placeholder='Message'onChange={(e)=> setMessage(e.target.value)}/>
+            <textarea name="message" required id="message" cols="55"  rows="5" placeholder='Message'onChange={(e)=> setMessage(e.target.value)}/>
             <MessageIcon className='FormsIconTextArea' />
             </div>
 
@@ -91,9 +92,15 @@ export default function ContactForms() {
             ) : ""
              }
 
-            <div className={`contactFormsInput submit btnh flex a-center gap-small`}>
-          <input className={`contactFormsInputSubmit  submit flex a-center gap-small ${loading ? "loading" : ""}`} type="Submit" defaultValue="Let's Talk"/>
-            </div>
+
+             { loading ? (
+              <div className="wait">
+              Please Wait...
+              </div>
+            ) : ""
+             }
+
+          <input className={`FormsInputSubmit ${loading ? "loading" : ""}`} disabled={loading} type="Submit" defaultValue="Let's Talk"/>
 
         </form>
             </div>

@@ -1,17 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Arrow from "../../assets/Send.png";
 import "./footer.css";
-import logo from "../../assets/Logo2.png";
+import logo from "../../assets/logo2.svg";
 import Map from "../../assets/Map.png";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 
 export default function Footer() {
   const [subcribe, setsubcribe] = useState("")
+  const [links, setLinks] = useState("")
+  useEffect(() => {
+    const getLinks = async() => {
+      try {
+        const res = await axios.get("/main-info/")
+        setLinks(res.data.results)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getLinks()
+  }, [])
+
   return (
     <div className="footerContainer">
       <div className="footerContactBox">
@@ -63,8 +77,7 @@ export default function Footer() {
             <li> <NavLink to="/">Home</NavLink></li>
             <li> <NavLink to="/ourworks">Works</NavLink></li>
             <li> <NavLink to="/about">About</NavLink></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><NavLink to="/contactus">Contact</NavLink></li>
+            <li> <NavLink to="/contactus">Contact</NavLink></li>
         </ul>
 
             <ul className="footerPlatForms flex a-center j-between">

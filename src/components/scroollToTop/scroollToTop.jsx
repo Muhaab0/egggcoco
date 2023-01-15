@@ -4,7 +4,7 @@ import "./scroollToToTop.css"
 function ScrollToTop() {
   const [visible, setVisible] = useState(false);
   window.addEventListener("scroll", () => {
-    window.pageYOffset > 100 ? setVisible(true) : setVisible(false);
+    window.pageYOffset > 30 ? setVisible(true) : setVisible(false);
   });
 
   return (

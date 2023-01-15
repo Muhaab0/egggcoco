@@ -139,7 +139,7 @@
 .packagePopup {
     background-color: var(--main-color);
     padding: 25px;
-    width: 300px;
+    width: 350px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -225,10 +225,12 @@
     margin-bottom: 15px;
     color: black;
     padding: 0 10px;
+    font-size: 16px!important;
 }
 
 .packageFormsInput textarea {
     height: 100px!important;
+    padding: 10px;
 }
 .packageFormsPhone {
     position: relative;
@@ -269,13 +271,11 @@
 }
 
 .packageFormsInput input::placeholder {
-    width: 60%;
     transform: translatey(-50%);
     font-weight: 200;
-    font-size: 15px;
+    font-size: 16px;
     position: absolute;
     top: 50%;
-    left: 10px ;
     z-index: 5;
     color:var(--gray-color);
     -webkit-transform: translatey(-50%);
@@ -288,7 +288,7 @@
     text-align: left;
     margin: auto;
     padding: 8px 10px;
-    width: 110px;
+    width: 160px;
      /* background: var(--third-color-pink); */
      color: white;
      border-radius: 10px;

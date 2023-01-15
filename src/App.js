@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route , HashRouter } from "react-router-dom";
+import { Routes, Route  } from "react-router-dom";
 import About from "./pages/about/about";
 import Contactus from "./pages/contactus/contactus";
 import CustomPackage from "./pages/customPackage/customPackage";
@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/eggcoco/" element={<Home />}/>
         <Route exact path="/" element={<Home />}/>
         <Route path="/ourworks" element={<Works />}/>
         <Route path="/about" element={<About />}/>

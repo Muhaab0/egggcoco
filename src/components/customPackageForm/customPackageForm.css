@@ -40,6 +40,7 @@
 .PhoneInputInput,.PhoneInputInput:focus{
     border: none!important;
     outline: none;
+    font-size: 16px;
 }
 
 .customPhoneInput {
@@ -60,6 +61,7 @@
     border: solid 1px var(--main-color) ;
     outline: none;
     margin-bottom: 30px;
+    font-size: 16px;
 }
 
 .customPackageFormsInput textarea {
@@ -91,13 +93,12 @@
 }
 
 .customPackageFormsInput input::placeholder {
-    width: 60%;
+    position: absolute;
     transform: translatey(-50%);
     font-weight: 200;
-    font-size: 15px;
+    font-size: 16px;
     position: absolute;
     top: 50%;
-    left: 20px ;
     z-index: 5;
     color:var(--gray-color);
     -webkit-transform: translatey(-50%);
@@ -106,21 +107,6 @@
     -o-transform: translatey(-50%);
 }
 
-.customPackageFormsInput.submit {
-    text-align: left;
-    width: 125px;
-    margin-top: 10px;
-    margin: auto;
-     width: 125px;
-     background: var(--main-color);
-     color: white;
-     border-radius: 10px;
-     -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-     -ms-border-radius: 10px;
-     -o-border-radius: 10px;
-     cursor: pointer;
-}
 .customPackageFormsPhone {
     position: relative;
 }
@@ -130,14 +116,30 @@
     top: 45%;
 }
 
-.customPackageFormsInputSubmit {
-    background-color: transparent;
+.FormsInputSubmit {
+    margin-top: 10px;
+    margin: auto;
+    width: 160px;
+    background: var(--main-color);
+     border-radius: 10px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     cursor: pointer;
     border: none;
     color: white;
     cursor: pointer;
     padding: 10px;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.FormsInputSubmit:hover {
+    background-color: var(--third-color-pink);
+}
+
 .checkBoxContainer {
     flex-direction: column;
     width: 80%;

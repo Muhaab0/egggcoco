@@ -25,7 +25,6 @@ export default function Package() {
     const inputRef = useRef(null);
     const [err, setErr] = useState([]);
     const navigate = useNavigate();
-  console.log(packageBoxs)
     useEffect(() => {
         const getPackage = async() => {
           try {
@@ -44,6 +43,7 @@ export default function Package() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         setLoading(true)
+        setErr(false)
         const form = {
             customer: {
               "name":name,
@@ -54,10 +54,12 @@ export default function Package() {
             package:+openModal.id
           }
           try {
-            const res = await axios.post(`/package-order/create/`,  form )
+            await axios.post(`/package-order/create/`,  form )
             const name = form.customer.name
             setOpenModal(false)
             navigate("/" ,{state:{name}})
+            setErr(false)
+            setLoading(false)
           } catch (error) {
             setErr(error.response.data.customer.phone_number)
             setLoading(false)
@@ -84,7 +86,6 @@ export default function Package() {
             <p className='text-center packagePrice'>{+box.price}$</p>
             <p className='packageName'>{box.name}</p>
 
-            {/* <VerifiedUserIcon className='packageIcon' /> */}
               <div
                 dangerouslySetInnerHTML={{__html:box.description}}>
               </div>
@@ -114,7 +115,7 @@ export default function Package() {
             <div className='packageFormsPhone'>
             <PhoneInput
             className='packagePhoneInput'
-            placeholder="Enter phone number"
+            placeholder="Phone"
             value={phone}
             required
             country={'eg'}
@@ -133,7 +134,7 @@ export default function Package() {
             </div>
 
             <div className='packageFormsInput'>
-            <textarea name="message" id="message" cols="55" rows="5" placeholder='Please discuss about ur vision' className='packageTextArea' value={message}  onChange={(e)=> setMessage(e.target.value)}/>
+            <textarea name="message" required id="message" cols="55" rows="5" placeholder='Please discuss about ur vision' className='packageTextArea' value={message}  onChange={(e)=> setMessage(e.target.value)}/>
             <MessageIcon className='packagesFormsIconTextArea' />
             </div>
                   
@@ -148,9 +149,21 @@ export default function Package() {
                   } 
 
 
-            <div className='packageFormsInput submit btnh flex a-center gap-small'>
-          <input className={`packageFormsInputSubmit  submit flex a-center gap-small ${loading ? "loading" : ""}`} type="Submit" defaultChecked="Let's Talk"/>
-            </div>
+
+
+                  {
+                    loading ? (
+                      <>
+                      <div className='wait'>
+                      Please Wait...
+                      </div>
+                      </>
+                    ): ""
+                  } 
+
+
+
+          <input className={`FormsInputSubmit  submit flex a-center gap-small ${loading ? "loading" : ""}`} disabled={loading} type="Submit" defaultChecked="Let's Talk"/>
 
             </form>
             </div>

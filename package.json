@@ -1,8 +1,5 @@
 {
-    "homepage": "https://Muhaab0.github.io/eggcoco/",
-    "name": "egycoco",
-    "version": "0.1.0",
-    "private": false,
+    "homepage ":"http://Muhaab0.github.io/eggcoco",
     "dependencies": {
       "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

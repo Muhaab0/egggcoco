@@ -3,7 +3,7 @@
 .companiesBoxes {
     column-gap: 150px;
     flex-wrap: wrap;
-    z-index: 55555;
+    z-index: 55;
     position: relative;
 }
 

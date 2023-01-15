@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import img from '../../assets/Group 10108.png'
 import "./hero.css"
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Vector from "../../assets/HomeVector.png"
-import CloseIcon from '@mui/icons-material/Close';
+import { NavLink } from "react-router-dom";
 
 
 
@@ -24,13 +24,14 @@ export default function Hero() {
                 <div className="heroSubText">
                     <p>We provide various services to make your business grow and get bigger. Your satisfaction is our first priority.</p>
                 </div>
-
+                <NavLink to="/custompackage">
                 <button className='heroBtn btnh flex a-center '>
                 <p>
                 Get Started
                 </p>
                 <ArrowRightAltIcon className='heroArrow'/> 
                 </button>
+                </NavLink>
         </div>
 
           

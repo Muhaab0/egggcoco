@@ -1,9 +1,8 @@
-import React,{useEffect, useRef, useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import "./customPackageForm.css"
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MessageIcon from '@mui/icons-material/Message';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import axios from "axios"
 import {useNavigate } from "react-router-dom";
 import 'react-phone-number-input/style.css'
@@ -53,6 +52,8 @@ export default function CustomPackageForm() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
+    setErr([])
+    setServiceErr([])
     const form = {
       customer: {
         "name":name,
@@ -63,16 +64,15 @@ export default function CustomPackageForm() {
         services:checkList
     }
     try {
-      const res = await axios.post(`/custom-order/create/`, form )
+      await axios.post(`/custom-order/create/`, form )
       const name = form.customer.name
       navigate("/" ,{state:{name}})
-      console.log(res)
     } catch (error) {
       setErr([])
       setServiceErr([])
+      setLoading(false)
       setServiceErr(error.response.data.services)
       setErr(error.response.data.customer.phone_number)
-      setLoading(false)
     }
   }
 
@@ -96,7 +96,7 @@ export default function CustomPackageForm() {
             <div className='customPackageFormsPhone '>
             <PhoneInput
             className='customPhoneInput'
-            placeholder="Enter phone number"
+            placeholder="Phone"
             value={phone}
             required
             country={'eg'}
@@ -110,7 +110,7 @@ export default function CustomPackageForm() {
             </div>
 
             <div className='customPackageFormsInput'>
-            <textarea name="message" id="message"  cols="55" rows="5" placeholder='Please discuss about ur vision' value={message} onChange={(e)=>setMessage(e.target.value)}/>
+            <textarea name="message" required id="message"  cols="55" rows="5" placeholder='Please discuss about ur vision' value={message} onChange={(e)=>setMessage(e.target.value)}/>
             <MessageIcon className='customFormsIconTextArea' />
             </div>
 
@@ -139,9 +139,19 @@ export default function CustomPackageForm() {
                     ): ""
                   } 
 
-            <div className='customPackageFormsInput submit btnh flex a-center gap-small'>
-          <input className={`customPackageFormsInputSubmit submit flex a-center gap-small ${loading ? "loading" : ""}`} type="Submit" defaultValue="Let's Talk"/>
-            </div>
+
+                  {
+                    
+                    loading ? (
+                      <div className='wait'>
+                      Please Wait ...
+                      </div>
+                    ): ""
+                  } 
+
+
+
+          <input className={`FormsInputSubmit ${loading ? "loading" : ""}`} disabled={loading} type="Submit" defaultValue="Let's Talk"/>
 
         </form>
     </div>

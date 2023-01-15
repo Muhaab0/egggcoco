@@ -8,13 +8,16 @@ import Faq from "../../components/faq/faq";
 import CustomPackageContainer from "../../components/customPackageContainer/customPackageContainer";
 import Footer from "../../components/footer/footer";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 import ScrollToTop from "../../components/scroollToTop/scroollToTop";
 import  WhatsApp  from "../../components/whatsUp/whatsUp";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(true)
   const state = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div>
     {

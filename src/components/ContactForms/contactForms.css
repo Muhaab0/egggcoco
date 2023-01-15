@@ -50,6 +50,7 @@
     border: solid 1px var(--main-color) ;
     outline: none;
     margin-bottom: 30px;
+    font-size: 16px;
 }
 
 .contactFormsInput textarea {
@@ -85,13 +86,11 @@
 }
 
 .contactFormsInput input::placeholder {
-    width: 60%;
     transform: translatey(-50%);
     font-weight: 200;
-    font-size: 15px;
+    font-size: 16px;
     position: absolute;
     top: 50%;
-    left: 20px ;
     z-index: 5;
     color:var(--gray-color);
     -webkit-transform: translatey(-50%);
@@ -103,7 +102,7 @@
 .contactFormsInput.submit {
     text-align: left;
     margin-left: 40px;
-     width: 125px;
+     width: 160px;
      background: var(--main-color);
      color: white;
      border-radius: 10px;
@@ -112,6 +111,7 @@
      -ms-border-radius: 10px;
      -o-border-radius: 10px;
      cursor: pointer;
+     margin: auto;
 }
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../../assets/Frame.png'
+import logo from '../../assets/logo.svg'
 import "./navbar.css"
 import { NavLink, Link } from "react-router-dom";
 import CloseIcon from '@mui/icons-material/Close';
@@ -46,7 +46,7 @@ export default function Navbar() {
         </NavLink>
         </li>
     </ul>
-    <button  className={`btn btnh flex j-between a-center ${isNavOpen ? "block" : ""}`}><Link to="/contactus">Contact us</Link></button>
+    <Link to="/contactus"> <button  className={`btn btnh flex j-between a-center ${isNavOpen ? "block" : ""}`}>Contact us</button></Link>
     </div>
   )
 }
