@@ -237,3 +237,35 @@
   
   }
 
+
+  .blue {
+    background-color: var(--main-color);
+  }
+
+  .orange {
+    background-color: var(--secondary-color-orange);
+  }
+
+  .yellow {
+    background-color: var(--secondary-color-yellow);
+  }
+
+  .green {
+    background-color: var(--secondary-color-green);
+  }
+
+  .sky {
+    background-color: var(--secondary-color-sky);
+  }
+  .mof {
+    background-color: var(--third-color-mof);
+  }
+  .pink {
+    background-color: var(--third-color-pink);
+  }
+  .gray {
+    background-color: var(--gray-color);
+  }
+.red {
+  background-color: var(--secondary-color-red);
+}

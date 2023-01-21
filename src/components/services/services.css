@@ -6,7 +6,7 @@
 .serviceBoxes {
     margin-top: 60px;
     flex-wrap: wrap;
-    column-gap: 70px;
+    column-gap: 120px;
     row-gap: 40px;
     text-align: center;
 

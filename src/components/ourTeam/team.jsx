@@ -16,6 +16,7 @@ const [team, setTeam] = useState([])
     getTeam()
   }, [])
 
+
   return (
     <div className='teamContainer main-padding'>
     <div className='subHeader'>Our Great Team</div>

@@ -16,8 +16,9 @@ function WhatsApp() {
     }
     getLinks()
   }, [])
+  
   window.addEventListener("scroll", () => {
-    window.pageYOffset > 30 ? setVisible(true) : setVisible(false);
+    window.pageYOffset > 35 ? setVisible(true) : setVisible(false);
   });
 
   return (

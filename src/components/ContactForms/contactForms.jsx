@@ -23,7 +23,6 @@ export default function ContactForms() {
   const [errors, setError] = useState([]);
   const navigate = useNavigate();
   const [links, setLinks] = useState("")
-  console.log(links.whatsapp_link)
   useEffect(() => {
     const getLinks = async() => {
       try {
@@ -88,7 +87,7 @@ export default function ContactForms() {
             </div>
 
             <div className='contactFormsInput'>
-          <input type="email" name="email" id="email" required placeholder="Email" onChange={(e)=> setEmail(e.target.value)}/>
+          <input type="email" name="email" id="email" required placeholder='Email' onChange={(e)=> setEmail(e.target.value)}/>
           <MailOutlineIcon className='FormsIcon' />
             </div>
 

@@ -116,6 +116,7 @@ color: var(--main-color);
     }
 
     .customerBoxes {
+        margin-top: 70px!important;
         margin: auto;
         height: unset;
         width: unset;
@@ -127,7 +128,7 @@ color: var(--main-color);
         width: 100%;
     }
     .customerCustomer {
-        margin-top: 70px;
+        
         text-align: center;
         width: unset;
     }

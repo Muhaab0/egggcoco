@@ -1,5 +1,4 @@
 .teamBox {
-    background-color: #fbfbfb;
     padding: 15px 0;
     text-align: center;
     position: relative;
@@ -14,8 +13,8 @@
 .teamBoxes {
     flex-wrap: wrap;
 }
-.teamBoxImage.Graphic  {
-    background-color: var(--main-color);
+
+.teamBoxImage {
     height: 250px;
     width: 300px;
     border-radius: 10px;
@@ -26,29 +25,6 @@
     margin-bottom: 10px;
 }
 
-.teamBoxImage.Networking  {
-    background-color: var(--secondary-color-yellow);
-    height: 250px;
-    width: 300px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.teamBoxImage.Product  {
-    background-color: var(--third-color-pink);
-    height: 250px;
-    width: 300px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    margin-bottom: 10px;
-}
 
 .teamBoxImg {
     object-fit: contain;
@@ -62,6 +38,11 @@
     -moz-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .teamBox h6 {

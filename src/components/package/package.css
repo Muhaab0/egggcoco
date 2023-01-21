@@ -270,19 +270,7 @@
     -o-transform: translatey(-50%);
 }
 
-.packageFormsInput input::placeholder {
-    transform: translatey(-50%);
-    font-weight: 200;
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    color:var(--gray-color);
-    -webkit-transform: translatey(-50%);
-    -moz-transform: translatey(-50%);
-    -ms-transform: translatey(-50%);
-    -o-transform: translatey(-50%);
-}
+
 
 .packageFormsInput.submit {
     text-align: left;
@@ -345,6 +333,6 @@
         top: 0px!important;
         left: 140px;
     }
-    
+
     
 }

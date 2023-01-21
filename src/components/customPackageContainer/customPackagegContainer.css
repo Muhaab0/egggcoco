@@ -1,6 +1,8 @@
 .customPackageContainerContainer {
 padding-top: 120px!important;
 padding-bottom: 40px!important;
+position: relative;
+z-index: 555;
 }
 
 .customPackageContainerBox {

@@ -10,7 +10,6 @@ import Footer from "../../components/footer/footer";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
-import ScrollToTop from "../../components/scroollToTop/scroollToTop";
 import  WhatsApp  from "../../components/whatsUp/whatsUp";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(true)
@@ -41,7 +40,6 @@ export default function Home() {
     <Faq />
     <CustomPackageContainer />
     <Footer />
-    <ScrollToTop />
     <WhatsApp />
     </div>
   )

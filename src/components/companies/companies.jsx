@@ -16,7 +16,7 @@ export default function Companies() {
     <div className='companiesContainer main-padding'>
         <div className='subHeader'>Some of Our Great Customers</div>
         <div className='subTitleHeader'>Some of the companies we have worked with</div>
-        <div className='companiesBoxes flex a-center j-between'>
+        <div className='companiesBoxes flex a-center j-center'>
             <div className='companiesBox'>
                 <img className='companiesBoxImg' src={Amazon} alt="amazon" />
             </div>

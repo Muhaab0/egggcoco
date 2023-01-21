@@ -7,11 +7,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const html = document.querySelector("html");
-  html.addEventListener("click", (e) => setIsNavOpen(false));
-
-  const [setVisible] = useState(false);
-  window.addEventListener("scroll", () => window.pageYOffset > 200 ? setVisible(true) : setVisible(false));
   return (
     <div className='container flex j-between a-center main-padding '>
     <Link to="/">

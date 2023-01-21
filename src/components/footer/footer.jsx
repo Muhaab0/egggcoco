@@ -8,37 +8,60 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import {useNavigate } from "react-router-dom";
 
 
 export default function Footer() {
-  const [setsubcribe] = useState("")
-  const [links, setLinks] = useState("")
+  const navigate = useNavigate();
+  const [email , setEmail] = useState("")
+  const [loading, setLoading] = useState("")
+  const [footer, setFooter] = useState("")
   useEffect(() => {
-    const getLinks = async() => {
+    const getfooter = async() => {
       try {
         const res = await axios.get("/api/main-info/")
-        setLinks(res.data)
+        setFooter(res.data)
       } catch (error) {
         console.log(error)
       }
     }
-    getLinks()
+    getfooter()
   }, [])
+
+
+
+
+
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    const form = {
+      "email":email,
+      }
+      try {
+        await axios.post(`/api/subscribed-email/`, form )
+        const name = form.email
+        navigate("/" ,{state:{name}})
+        setLoading(false)
+    } catch (error) {
+      setLoading(false)
+      console.log(error)
+    }
+  }
 
   return (
     <div className="footerContainer">
       <div className="footerContactBox">
         <h6>Get Notified About Projects</h6>
         <h2>Subscribe Now</h2>
-        <div className="footerInputContainer">
-          <input type="email" name="email" id="email" placeholder="Email"  onChange={(e)=> setsubcribe(e.target.value)}/>
-          <button onClick={ (e) => {
-             window.location.reload(true)
-          }
-          }>
+        <form onSubmit={(e)=> handleSubmit(e) } className="footerInputContainer">
+          <input type="email" name="email" id="email" required placeholder="Email"  onChange={(e)=> setEmail(e.target.value)}/>
+          <button className={`${loading ? "loading" : ""}`} disabled={loading}>
             <img src={Arrow} alt="arrow" />
           </button>
-        </div>
+        </form>
       </div>
       <div className="footer main-padding">
         <div className="footerTop  flex  j-between">
@@ -46,12 +69,7 @@ export default function Footer() {
         <div className="footerAbout">
           <img src={logo} alt="logo" className="footerLogo " />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+           {footer.why_us}
           </p>
         </div>
         <div className="footerOfficeMap">
@@ -63,9 +81,9 @@ export default function Footer() {
         <div className="footerContact">
             <h4>Contact</h4>
             <div className="footerContactInfo">
-            <p className="footerContactDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
-            <p className="footerContactEmail">info@egcoco.com</p>
-            <p className="footerContactPhone">+20 000 0000 00</p>
+            <p className="footerContactDesc">{footer.about_us}</p>
+            <p className="footerContactEmail">{footer.address}</p>
+            <p className="footerContactPhone">{footer.whatsapp}</p>
             </div>
         </div>
       </div>
@@ -80,10 +98,10 @@ export default function Footer() {
         </ul>
 
             <ul className="footerPlatForms flex a-center j-between">
-                <li className="platFromsIcons btnh"><a href={links.facebook}><FacebookIcon className="platFormIconsicon" /></a></li>
-                <li className="platFromsIcons btnh"><a href={links.instagram}><InstagramIcon className="platFormIconsicon" /></a></li>
-                {/* <li className="platFromsIcons btnh"><a href={links.telegram}><LinkedInIcon className="platFormIconsicon" /></a></li> */}
-                <li className="platFromsIcons btnh"><a href={links.twitter}><TwitterIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href={footer.facebook}><FacebookIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href={footer.instagram}><InstagramIcon className="platFormIconsicon" /></a></li>
+                {/* <li className="platFromsIcons btnh"><a href={footer.telegram}><LinkedInIcon className="platFormIconsicon" /></a></li> */}
+                <li className="platFromsIcons btnh"><a href={footer.twitter}><TwitterIcon className="platFormIconsicon" /></a></li>
             </ul>
       </div>
         </div>

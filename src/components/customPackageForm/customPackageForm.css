@@ -92,20 +92,6 @@
     -o-transform: translatey(-50%);
 }
 
-.customPackageFormsInput input::placeholder {
-    position: absolute;
-    transform: translatey(-50%);
-    font-weight: 200;
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    color:var(--gray-color);
-    -webkit-transform: translatey(-50%);
-    -moz-transform: translatey(-50%);
-    -ms-transform: translatey(-50%);
-    -o-transform: translatey(-50%);
-}
 
 .customPackageFormsPhone {
     position: relative;
@@ -259,6 +245,7 @@ input[type="checkbox"]::before {
     .customFormsIconTextArea {
         right: 12%!important;
     }
+
 }
 
 @media (max-width:900px) {
