@@ -1,21 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import "./WhatUp.css"
 import axios from "axios";
+import { useQuery } from "react-query";
 function WhatsApp() {
   const [visible, setVisible] = useState(false);
-  const [links, setLinks] = useState("")
-  useEffect(() => {
-    const getLinks = async() => {
-      try {
-        const res = await axios.get("/api/main-info/")
-        setLinks(res.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getLinks()
-  }, [])
+
+  
+  const { data } = useQuery("whats", async () => {
+    return await axios.get("/api/main-info/").then((res) => res.data);
+});
+
+
   
   window.addEventListener("scroll", () => {
     window.pageYOffset > 35 ? setVisible(true) : setVisible(false);
@@ -23,7 +19,7 @@ function WhatsApp() {
 
   return (
     <div className="whatsUp">
-      <a href={links.whatsapp_link} className={`${visible ? "block" : "none"}`}>
+      <a href={data?.whatsapp_link} className={`${visible ? "block" : "none"}`}>
         <WhatsAppIcon className="WhatsAppIcon"/>
       </a>
     </div>

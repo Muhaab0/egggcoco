@@ -66,6 +66,7 @@
   font-size: 14px;
   color: var(--secondary-color-red);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .wait {
@@ -73,6 +74,7 @@
   color: var(--gray-color1);
   font-size: 14px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .ConfirmationMessage {
@@ -118,9 +120,9 @@
   }
 
 .btnh:hover {
-  background-color: var(--third-color-pink);
+  background-color: var(--main-color);
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  box-shadow: rgba(0, 0, 0, 0.50) 0px 25px 50px -12px;
 }
 
 @media (max-width:800px) {
@@ -268,4 +270,66 @@
   }
 .red {
   background-color: var(--secondary-color-red);
+}
+
+
+
+
+
+.paginationBtns {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    position: relative;
+    cursor: pointer;
+    z-index: 555;
+}
+
+.paginationBtns li a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: solid 1px var(--main-color);
+  color: transparent;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.disabled a{
+  background-color: var(--gray-color);
+  border-color:var(--gray-color)!important ;
+  color: var(--gray-color)!important;
+  cursor: no-drop;
+  display: none!important;
+}
+.previous a, .next  a {
+  display: block;
+  width: 20px!important;
+  height: 20px!important;
+  color: var(--main-color)!important;
+}
+
+.paginationActive a {
+  background-color: var(--main-color);
+}
+
+
+.paginationIcon {
+  font-size: 18px!important;
+  font-weight: 800;
 }

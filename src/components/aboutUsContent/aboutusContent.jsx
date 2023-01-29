@@ -1,6 +1,5 @@
 import React from 'react'
 import "./aboutUsContent.css"
-import Vector from "../../assets/ContentVector.png"
 export default function AboutusContent() {
   return (
     <div className='aboutContentContainer main-padding'>

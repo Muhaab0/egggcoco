@@ -9,8 +9,11 @@
     column-gap: 120px;
     row-gap: 40px;
     text-align: center;
-
-
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
 }
 
 .serviceBox {
@@ -26,7 +29,7 @@
     padding: 0 20px;
     cursor: pointer;
     position: relative;
-    z-index: 50;
+    z-index: 200;
     background: white;
 }
 
@@ -127,7 +130,6 @@ margin: 15px 0;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    display: none;
     color: white;
 }
 
@@ -174,4 +176,8 @@ margin: 15px 0;
         font-size: 24px!important;
     }
 
+}
+
+.index {
+    z-index: 500000000;
 }

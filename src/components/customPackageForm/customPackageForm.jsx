@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{ useState } from 'react'
 import "./customPackageForm.css"
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -8,15 +8,15 @@ import {useNavigate } from "react-router-dom";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import CallIcon from '@mui/icons-material/Call';
+import { useQuery } from 'react-query';
 
 
 
 export default function CustomPackageForm() {
-  const [service, setService] = useState([]);
   const [checkList, setCheckList] = useState([]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState("+20");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [serviceErr, setServiceErr] = useState([]);
@@ -24,17 +24,9 @@ export default function CustomPackageForm() {
   const navigate = useNavigate();
   
 
-  useEffect(() => {
-    const getServices = async() => {
-      try {
-        const res = await axios.get("/api/service/all/")
-        setService(res.data.results)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getServices()
-  }, [])
+  const { data , isLoading , isError ,error} = useQuery("service", async () => {
+    return await axios.get("/api/service/all/").then((res) => res.data);
+});
 
   const handleChange = e => {
 
@@ -115,8 +107,24 @@ export default function CustomPackageForm() {
             </div>
 
                   <div className='checkBoxContainer flex gap-small '>
+                  {
+                  isLoading ? (
+                      <div className='wait'>
+                      <p>Loading Please Wait...</p>
+                      </div>     
+                  )
+                    : ""
+                  }
+
+                  {
+                  isError ? (
+                        <div className='err'>
+                        <p>{error.message}</p>
+                        </div>
+                      ) : ""
+                  }
             {
-                service.map((serv)=> (
+                data?.results.map((serv)=> (
                   <div className='checkBoxgrid' key={serv.id}>
                     <input type="checkbox"  id={serv.name} name={serv.name} value={serv.id}  onChange={(e)=> handleChange(e)}/>
                     <label htmlFor={serv.name} >{serv.name}</label><br/>
@@ -151,7 +159,7 @@ export default function CustomPackageForm() {
 
 
 
-          <input className={`FormsInputSubmit ${loading ? "loading" : ""}`} disabled={loading} type="Submit" defaultValue="Let's Talk"/>
+          <input className={`FormsInputSubmit btnh ${loading ? "loading" : ""}`} disabled={loading} type="Submit" defaultValue="Let's Talk"/>
 
         </form>
     </div>

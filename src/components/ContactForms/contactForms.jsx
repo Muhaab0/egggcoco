@@ -1,4 +1,4 @@
-import { useEffect, useState  } from "react";
+import { useState  } from "react";
 import axios from "axios"
 import "./contactForms.css"
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -12,28 +12,23 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import {useNavigate } from "react-router-dom";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import { useQuery } from "react-query";
 
 
 export default function ContactForms() {
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState("+20");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [errors, setError] = useState([]);
   const navigate = useNavigate();
-  const [links, setLinks] = useState("")
-  useEffect(() => {
-    const getLinks = async() => {
-      try {
-        const res = await axios.get("/api/main-info/")
-        setLinks(res.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getLinks()
-  }, [])
+
+
+  const { data } = useQuery("footer", async () => {
+    return await axios.get("/api/main-info/").then((res) => res.data);
+});
+
 
   
   const handleSubmit = async (e) => {
@@ -62,9 +57,9 @@ export default function ContactForms() {
                 <h2>Let’s Work Together!</h2>
                 <p className='contactFormsParagraph'>I would like to meet with you to discuss something and opportunities for <br/> collaboration.</p>
                 <div className='contactFormsInfoContainer'>
-                <p className='contactFormsInfo flex a-center gap-half'><MailOutlineIcon className='ContactIcon' /> info@egcoco.com</p>
-                <p className='contactFormsInfo flex a-center gap-half'><ApartmentIcon className='ContactIcon' /> Address</p>
-                <p className='contactFormsInfo flex a-center gap-half'><CallIcon className='ContactIcon' /> +20  000 0000 00</p>
+                <p className='contactFormsInfo flex a-center gap-half'><MailOutlineIcon className='ContactIcon' /> {data?.email} </p>
+                <p className='contactFormsInfo flex a-center gap-half'><ApartmentIcon className='ContactIcon' /> {data?.address} </p>
+                <p className='contactFormsInfo flex a-center gap-half'><CallIcon className='ContactIcon' /> {data?.whatsapp} </p>
                 </div>
             </div>
             <div className='contactForms'>
@@ -111,7 +106,7 @@ export default function ContactForms() {
             ) : ""
              }
 
-          <input className={`FormsInputSubmit ${loading ? "loading" : ""}`} disabled={loading} type="Submit" defaultValue="Let's Talk"/>
+          <input className={`FormsInputSubmit btnh ${loading ? "loading" : ""}`} disabled={loading} type="Submit" defaultValue="Let's Talk"/>
 
         </form>
             </div>
@@ -120,7 +115,7 @@ export default function ContactForms() {
 
         <ul className='contactFormsLinks flex a-center  j-evenly'>
 
-          <a href={links.facebook}>
+          <a href={data?.facebook}>
         <div className='contactFormsLinkListContainer btnh flex a-center j-center gap-small'>
           <li>
           <FacebookIcon className='contactFormsLinkIcons'/> 
@@ -129,7 +124,7 @@ export default function ContactForms() {
         </div>
           </a>
 
-          <a href={links.instagram}>
+          <a href={data?.instagram}>
           <div className='contactFormsLinkListContainer btnh instgram flex j-center a-center gap-small'>
           <li>
           <InstagramIcon className='contactFormsLinkIcons'/> 
@@ -139,7 +134,7 @@ export default function ContactForms() {
           </a>
 
 
-          <a href={links.twitter}>
+          <a href={data?.twitter}>
           <div className='contactFormsLinkListContainer btnh flex a-center j-center gap-small'>
           <li>
           <TwitterIcon className='contactFormsLinkIcons'/> 

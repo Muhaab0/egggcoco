@@ -107,6 +107,9 @@
     .projectBoxDescription {
         width: 100%;
     }
+    .ProjectVector {
+        display: none;
+    }
 }
 
 @media (max-width:600px) {
@@ -120,6 +123,7 @@
         padding-left: 30px!important;
         padding-right: 30px!important;
     }
+
 }
 
 

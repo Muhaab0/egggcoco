@@ -64,3 +64,13 @@
                 display: none;
             }
         }
+
+        .isopen {
+            background-color: var(--main-color);
+            border: 1px solid var( --secondary-color-yellow);
+            color: white;
+        }
+
+        .opacity {
+            opacity: 0;
+        }

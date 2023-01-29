@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Arrow from "../../assets/Send.png";
 import "./footer.css";
 import logo from "../../assets/logo2.svg";
@@ -9,26 +9,19 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import {useNavigate } from "react-router-dom";
+import { useQuery } from "react-query";
 
 
 export default function Footer() {
   const navigate = useNavigate();
   const [email , setEmail] = useState("")
   const [loading, setLoading] = useState("")
-  const [footer, setFooter] = useState("")
-  useEffect(() => {
-    const getfooter = async() => {
-      try {
-        const res = await axios.get("/api/main-info/")
-        setFooter(res.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getfooter()
-  }, [])
 
 
+
+  const { data } = useQuery("footer", async () => {
+    return await axios.get("/api/main-info/").then((res) => res.data);
+});
 
 
 
@@ -69,7 +62,7 @@ export default function Footer() {
         <div className="footerAbout">
           <img src={logo} alt="logo" className="footerLogo " />
           <p>
-           {footer.why_us}
+           {data?.why_us}
           </p>
         </div>
         <div className="footerOfficeMap">
@@ -81,9 +74,9 @@ export default function Footer() {
         <div className="footerContact">
             <h4>Contact</h4>
             <div className="footerContactInfo">
-            <p className="footerContactDesc">{footer.about_us}</p>
-            <p className="footerContactEmail">{footer.address}</p>
-            <p className="footerContactPhone">{footer.whatsapp}</p>
+            <p className="footerContactDesc">{data?.about_us}</p>
+            <p className="footerContactEmail">{data?.email}</p>
+            <p className="footerContactPhone">{data?.whatsapp}</p>
             </div>
         </div>
       </div>
@@ -98,10 +91,10 @@ export default function Footer() {
         </ul>
 
             <ul className="footerPlatForms flex a-center j-between">
-                <li className="platFromsIcons btnh"><a href={footer.facebook}><FacebookIcon className="platFormIconsicon" /></a></li>
-                <li className="platFromsIcons btnh"><a href={footer.instagram}><InstagramIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href={data?.facebook}><FacebookIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href={data?.instagram}><InstagramIcon className="platFormIconsicon" /></a></li>
                 {/* <li className="platFromsIcons btnh"><a href={footer.telegram}><LinkedInIcon className="platFormIconsicon" /></a></li> */}
-                <li className="platFromsIcons btnh"><a href={footer.twitter}><TwitterIcon className="platFormIconsicon" /></a></li>
+                <li className="platFromsIcons btnh"><a href={data?.twitter}><TwitterIcon className="platFormIconsicon" /></a></li>
             </ul>
       </div>
         </div>
